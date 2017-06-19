@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    style="@style/MyMargin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/title_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_input"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:ems="12"
+        android:hint="@string/input_text"
+        android:inputType="textPersonName" />
+
+    <ImageButton
+        android:id="@+id/cleanInformation"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/title_input"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_rounded_all"
+        android:scaleType="fitCenter"
+        android:src="@drawable/x_cross" />
+
+    <TextView
+        android:id="@+id/input_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:text="@string/key_value_encryption"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_textview"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/linear_equationRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/linear_equation"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/not_linear_equationRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_linear_equation"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/phraseRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phrase"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/parametrLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:id="@+id/parametr_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="3"
+            android:focusable="false"
+            android:hint="A"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="+"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/parametr_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="3"
+            android:focusable="false"
+            android:hint="B"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="+"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/parametr_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="3"
+            android:focusable="false"
+            android:hint="C"
+            android:inputType="numberSigned" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parametrLayout">
+
+        <EditText
+            android:id="@+id/phraseEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:cursorVisible="false"
+            android:ems="12"
+            android:focusable="false"
+            android:hint="Фраза"
+            android:inputType="textPersonName"
+            android:longClickable="false" />
+
+        <ImageButton
+            android:id="@+id/cleanPhraseInformation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_rounded_all"
+            android:scaleType="fitCenter"
+            android:src="@drawable/x_cross" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutPhrase"
+        android:layout_marginTop="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/encrept_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/button_encrypt" />
+
+        <Button
+            android:id="@+id/discrypt_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/button_discrypt" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/file_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLinearLayout"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/file_name_hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/file_name_input"
+        android:layout_marginTop="5dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/write_to_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/button_write_to_file" />
+
+        <Button
+            android:id="@+id/read_from_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/button_read_from_file" />
+    </LinearLayout>
+</RelativeLayout>

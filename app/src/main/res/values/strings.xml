@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Cryptography</string>
+    <string name="title_input">Введите строку для шифровкания</string>
+    <string name="input_text">Ваша строка</string>
+    <string name="title_key">Введите ключ для зашифровки</string>
+    <string name="title_key_text">Введите текст для зашифровки</string>
+    <string name="title_key_pvch">Введите ключ ПВЧ</string>
+    <string name="title_key_gamma">Введите Т- период гаммы</string>
+    <string name="input_key">Ваш ключ</string>
+    <string name="input_key_text">Ваш текст</string>
+    <string name="button_encrypt">Зашифривать</string>
+    <string name="button_discrypt">Расшифровать</string>
+    <string name="button_write_to_file">Записать в файл</string>
+    <string name="button_read_from_file">Считать с файла</string>
+    <string name="button_read_text_from_file">Считать текст с файла</string>
+
+    <string name="file_name_hint">Введите имя файла</string>
+
+    <string name="choose_laba">Выбирете лабораторную работу:</string>
+    <string name="choose_lab1">Шифрование Цезаря</string>
+    <string name="choose_lab2">Шифрование Тритеміуса</string>
+    <string name="choose_lab3">Шифрование Гамма</string>
+    <string name="choose_lab4">Шифрование текстом</string>
+    <string name="file_name">Имя файла:</string>
+    <string name="text_view_file_data">Содержимое файла:</string>
+    <string name="key_value_encryption">Выберите метод шифрования ключа:</string>
+    <string name="linear_equation">Линейное уровнение</string>
+    <string name="not_linear_equation">Нелинейное уровнение</string>
+    <string name="phrase">Фраза</string>
+    <string name="choose_des_method">Выберите метод шифрования:</string>
+    <string name="des_method">DES метод</string>
+
+    <string-array name="des_methods">
+        <item>ECB</item>
+        <item>CBC</item>
+        <item>CFB</item>
+        <item>OFB</item>
+        <item>CTR</item>
+    </string-array>
+    
+    <string name="Exit">Exit</string>
+    <string name="About">About us</string>
+    <string name="Details_msg_rus">Это приложение было создано студентом КПИ в качестве
+        лабораторной работы. Автор: Артём Гуминский</string>
+    <string name="OK_button">Закрыть</string>
+
+
+</resources>
