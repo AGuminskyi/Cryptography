@@ -15,7 +15,7 @@
     </style>
 
     <style name="MyMargin">
-        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginTop">50dp</item>
     </style>
 
 </resources>

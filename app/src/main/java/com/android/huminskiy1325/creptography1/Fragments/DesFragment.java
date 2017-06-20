@@ -55,7 +55,7 @@ public class DesFragment extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.cryptography_des_fragment, null, false);
+        View view = inflater.inflate(R.layout.cryptography_des_fragment, container, false);
 
         mEditText = (EditText) view.findViewById(R.id.editText);
         mKey = (EditText) view.findViewById(R.id.input_key);
@@ -67,8 +67,8 @@ public class DesFragment extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    if(mKey.getText().toString().length() < 4){
-                        Toast.makeText(getActivity(),"Ваш ключ должен быть больше 3 символов", Toast.LENGTH_LONG).show();
+                    if (mKey.getText().toString().length() < 4) {
+                        Toast.makeText(getActivity(), "Ваш ключ должен быть больше 3 символов", Toast.LENGTH_LONG).show();
                         throw new InvalidKeyException("Key is so short");
                     }
                     key = setKey(mKey.getText().toString());
@@ -124,7 +124,7 @@ public class DesFragment extends android.support.v4.app.Fragment {
         return view;
     }
 
-    private SecretKey setKey(String key){
+    private SecretKey setKey(String key) {
         try {
             DESKeySpec dks = new DESKeySpec(key.getBytes());
             SecretKeyFactory skf = SecretKeyFactory.getInstance("DES");

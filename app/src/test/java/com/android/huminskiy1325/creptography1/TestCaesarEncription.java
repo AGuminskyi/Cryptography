@@ -5,6 +5,11 @@ import com.android.huminskiy1325.creptography1.Cryptography.CryptographyCaesar;
 
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -15,7 +20,7 @@ import static org.junit.Assert.assertEquals;
 public class TestCaesarEncription {
 
     @Test
-    public void testEncription() {
+    public void testEncription() throws BadPaddingException, IllegalBlockSizeException, UnsupportedEncodingException {
         Cryptography cryptography = new CryptographyCaesar(5);
         String encriptedText;// = cryptography.encrypt("Hello world");
 //        assertEquals("MjqqtEБtwqi",encriptedText);

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Cryptography</string>
-    <string name="title_input">Введите строку для шифровкания</string>
+    <string name="title_input">Введите строку для шифрования</string>
     <string name="input_text">Ваша строка</string>
     <string name="title_key">Введите ключ для зашифровки</string>
     <string name="title_key_text">Введите текст для зашифровки</string>
@@ -16,7 +16,7 @@
 
     <string name="file_name_hint">Введите имя файла</string>
 
-    <string name="choose_laba">Выбирете лабораторную работу:</string>
+    <string name="choose_laba">Выбирете метод шифрования:</string>
     <string name="choose_lab1">Шифрование Цезаря</string>
     <string name="choose_lab2">Шифрование Тритеміуса</string>
     <string name="choose_lab3">Шифрование Гамма</string>
@@ -43,6 +43,7 @@
     <string name="Details_msg_rus">Это приложение было создано студентом КПИ в качестве
         лабораторной работы. Автор: Артём Гуминский</string>
     <string name="OK_button">Закрыть</string>
+    <string name="tv_input_file_name">Введите имя файла</string>
 
 
 </resources>

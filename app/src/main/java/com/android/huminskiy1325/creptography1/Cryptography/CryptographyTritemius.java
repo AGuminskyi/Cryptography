@@ -16,17 +16,11 @@ public class CryptographyTritemius implements Cryptography {
     private static String key_Phrase;
 
     public enum KeyChooser {
-//        Linear_Choose,
         NotLinear_Choose,
         Phrase_Choose
     }
 
     public void setKey(int A_value, int B_value, int C_value, String keyPhrase_value) {
-//        if (keyChooser == KeyChooser.Linear_Choose) {
-//            key_A = 0;
-//            key_B = B_value;
-//            key_C = C_value;
-//        }
         if (keyChooser == KeyChooser.NotLinear_Choose) {
             key_A = A_value;
             key_B = B_value;

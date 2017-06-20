@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 import ir.sohreco.androidfilechooser.ExternalStorageNotAvailableException;
 import ir.sohreco.androidfilechooser.FileChooserDialog;
@@ -50,7 +51,7 @@ public class TritemiusFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.cryptography_tritemius_fragment, null);
+        View view = inflater.inflate(R.layout.cryptography_tritemius_fragment, container,false);
 
         input_Text_Cryptography = (EditText) view.findViewById(R.id.editText);
 
@@ -165,7 +166,7 @@ public class TritemiusFragment extends Fragment {
             Integer C = Integer.parseInt(parametr_C.getText().toString());
             cryptographyTritemius.setKey(A, B, C, null);
         }
-        if (method == DECRYPT) {
+        if (Objects.equals(method, DECRYPT)) {
             input_Text_Cryptography.setText(cryptographyTritemius.decrypt(input_Text_Cryptography.getText().toString()));
         } else {
             input_Text_Cryptography.setText(cryptographyTritemius.encrypt(input_Text_Cryptography.getText().toString()));
