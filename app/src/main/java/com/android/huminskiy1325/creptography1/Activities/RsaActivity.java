@@ -9,6 +9,12 @@ import com.android.huminskiy1325.creptography1.Fragments.RsaFragment;
  */
 
 public class RsaActivity extends SingleFragmentActivity {
+
+    @Override
+    protected boolean getActionBarFromActivity() {
+        return false;
+    }
+
     @Override
     protected Fragment createFragment() {
         return new RsaFragment();

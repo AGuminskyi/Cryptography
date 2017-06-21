@@ -27,16 +27,17 @@
             android:layout_below="@id/title_input"
             android:layout_marginTop="5dp"
             android:ems="12"
-            android:hint="@string/input_text" />
+            android:hint="@string/input_text"
+            android:inputType="textPersonName" />
 
         <ImageButton
             android:id="@+id/cleanInformation"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_toRightOf="@+id/editText"
             android:layout_alignBottom="@id/editText"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/editText"
             android:background="@drawable/rectangle_rounded_all"
             android:scaleType="fitCenter"
             android:src="@drawable/x_cross" />
@@ -65,10 +66,10 @@
             android:id="@+id/cleanInformation_text"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_toRightOf="@+id/input_key"
             android:layout_alignBottom="@+id/input_key"
             android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/input_key"
             android:background="@drawable/rectangle_rounded_all"
             android:scaleType="fitCenter"
             android:src="@drawable/x_cross" />
@@ -129,8 +130,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/file_name_input"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/write_to_file_button"

@@ -44,7 +44,7 @@ public class StirlFragment extends Fragment {
 
         mEditText = (EditText) view.findViewById(R.id.editText);
         mKey = (EditText) view.findViewById(R.id.input_key);
-        mInputText = mEditText.getText().toString();
+       // mInputText = mEditText.getText().toString();
         mFileNameInput = (EditText) view.findViewById(R.id.file_name_input);
 
         Button readTxtFromFile = (Button) view.findViewById(R.id.read_text_from_file_button);

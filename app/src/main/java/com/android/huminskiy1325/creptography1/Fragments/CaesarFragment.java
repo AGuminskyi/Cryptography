@@ -44,35 +44,10 @@ public class CaesarFragment extends Fragment {
     private EditText mFileNameInput;
     private static String mInputText;
 
-    private static final String TAG = "myLogs";
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                if (NavUtils.getParentActivityIntent(getActivity()) != null) {
-                    NavUtils.navigateUpFromSameTask(getActivity());
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.cryptography_caesar_fragment, container, false);
-
-        if (NavUtils.getParentActivityIntent(getActivity()) != null) {
-            getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         mEditText = (EditText) view.findViewById(R.id.editText);
         mKey = (EditText) view.findViewById(R.id.input_key);

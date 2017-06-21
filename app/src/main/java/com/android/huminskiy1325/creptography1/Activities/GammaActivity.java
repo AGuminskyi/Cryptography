@@ -13,4 +13,9 @@ public class GammaActivity extends SingleFragmentActivity {
     protected Fragment createFragment() {
         return new GammaFragment();
     }
+
+    @Override
+    protected boolean getActionBarFromActivity() {
+        return true;
+    }
 }

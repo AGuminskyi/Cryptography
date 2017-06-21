@@ -13,4 +13,9 @@ public class TritemiusActivity extends SingleFragmentActivity {
     protected Fragment createFragment() {
         return new TritemiusFragment();
     }
+
+    @Override
+    protected boolean getActionBarFromActivity() {
+        return true;
+    }
 }

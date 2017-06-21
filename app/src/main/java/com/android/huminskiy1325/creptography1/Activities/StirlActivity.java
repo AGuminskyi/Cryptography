@@ -13,4 +13,9 @@ public class StirlActivity extends SingleFragmentActivity {
     protected Fragment createFragment() {
         return new StirlFragment();
     }
+
+    @Override
+    protected boolean getActionBarFromActivity() {
+        return true;
+    }
 }

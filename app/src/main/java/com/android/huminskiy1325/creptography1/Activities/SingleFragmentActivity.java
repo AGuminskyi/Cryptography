@@ -21,6 +21,8 @@ import com.android.huminskiy1325.creptography1.R;
 public abstract class SingleFragmentActivity extends AppCompatActivity {
     protected abstract Fragment createFragment();
 
+    protected abstract boolean getActionBarFromActivity();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,9 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
+            if (getActionBarFromActivity()) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -41,6 +46,12 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.fragment_options_menu, menu);
         return true;
@@ -49,7 +60,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch (id){
+        switch (id) {
             case R.id.about_author:
                 buildAlertDialog();
                 return true;

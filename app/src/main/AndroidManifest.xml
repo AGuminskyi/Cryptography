@@ -15,50 +15,33 @@
         <activity
             android:name=".Activities.CaesarActivity"
             android:label="@string/app_name">
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
-
         </activity>
 
         <activity
             android:name=".Activities.GammaActivity"
             android:label="@string/app_name">
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
         </activity>
 
         <activity
             android:name=".Activities.StirlActivity"
             android:label="@string/app_name" >
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
         </activity>
 
         <activity
             android:name=".Activities.TritemiusActivity"
             android:label="@string/app_name" >
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
         </activity>
 
         <activity
             android:name=".Activities.RsaActivity"
             android:label="@string/app_name" >
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
+
         </activity>
 
         <activity
             android:name=".Activities.DesActivity"
             android:label="@string/app_name" >
-            <meta-data
-                android:name="anroid.support.PARENT_ACTIVITY"
-                android:value=".ChooseLabActivity" />
+
         </activity>
 
         <activity
