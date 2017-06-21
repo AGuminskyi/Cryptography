@@ -3,7 +3,9 @@ package com.android.huminskiy1325.creptography1.Fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -37,9 +39,9 @@ import ir.sohreco.androidfilechooser.FileChooserDialog;
 public class CaesarFragment extends Fragment {
     private Cryptography cryptography;
 
-    private  EditText mKey;
-    private  EditText mEditText;
-    private  EditText mFileNameInput;
+    private EditText mKey;
+    private EditText mEditText;
+    private EditText mFileNameInput;
     private static String mInputText;
 
     private static final String TAG = "myLogs";
@@ -47,12 +49,30 @@ public class CaesarFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (NavUtils.getParentActivityIntent(getActivity()) != null) {
+                    NavUtils.navigateUpFromSameTask(getActivity());
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.cryptography_caesar_fragment, container, false);
+
+        if (NavUtils.getParentActivityIntent(getActivity()) != null) {
+            getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         mEditText = (EditText) view.findViewById(R.id.editText);
         mKey = (EditText) view.findViewById(R.id.input_key);

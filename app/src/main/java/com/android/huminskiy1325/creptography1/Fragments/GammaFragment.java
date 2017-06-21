@@ -52,8 +52,6 @@ public class GammaFragment extends Fragment {
         mEditText = (EditText) view.findViewById(R.id.editText);
         mInputText = mEditText.getText().toString();
         mKeyPvch = (EditText) view.findViewById(R.id.input_key);
-//        param_T = (EditText) view.findViewById(R.id.editText_key_gamma);
-
 
 
         Button mEncryptButton;
