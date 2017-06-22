@@ -2,7 +2,6 @@ package com.android.huminskiy1325.creptography1.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,25 +10,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.android.huminskiy1325.creptography1.Cryptography.Cryptography;
 import com.android.huminskiy1325.creptography1.Cryptography.CryptographyStirl;
-import com.android.huminskiy1325.creptography1.Data.Data;
 import com.android.huminskiy1325.creptography1.R;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import ir.sohreco.androidfilechooser.ExternalStorageNotAvailableException;
-import ir.sohreco.androidfilechooser.FileChooserDialog;
 
 /**
  * Created by cubru on 18.05.2017.
  */
 
-public class StirlFragment extends Fragment {
+public class StirlFragment extends SingleAbstractFragment {
     private CryptographyStirl cryptography;
 
     private EditText mEditText;
@@ -51,7 +39,7 @@ public class StirlFragment extends Fragment {
         readTxtFromFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadData(true);
+                loadData(mKey, mEditText);
             }
         });
 
@@ -109,7 +97,7 @@ public class StirlFragment extends Fragment {
         mWriteToFileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveData();
+                saveData(mFileNameInput, mEditText);
             }
         });
 
@@ -118,12 +106,22 @@ public class StirlFragment extends Fragment {
         mReadFromFileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadData(false);
+                loadData(mKey, mEditText);
             }
         });
 
 
         return view;
+    }
+
+    @Override
+    protected void loadData(EditText mKey, EditText mEditText) {
+        super.loadData(mKey, mEditText);
+    }
+
+    @Override
+    protected void saveData(EditText mFileNameInput, EditText mEditText) {
+        super.saveData(mFileNameInput, mEditText);
     }
 
     private String getFormatText() {
@@ -141,49 +139,5 @@ public class StirlFragment extends Fragment {
         return builder.toString();
     }
 
-    private void saveData() {
-        String mFileName = mFileNameInput.getText().toString();
-        Data data = new Data(mFileName);
-        data.setmFileData(mEditText.getText().toString());
-        data.saveData(getActivity());
-        Toast.makeText(getActivity(), "Data saved", Toast.LENGTH_SHORT).show();
-    }
 
-    public void loadData(boolean flag) {
-        FileChooserDialog.Builder builder = new FileChooserDialog.Builder(FileChooserDialog.ChooserType.FILE_CHOOSER, new FileChooserDialog.ChooserListener() {
-            @Override
-            public void onSelect(String path) {
-
-                File file = new File(path);
-                String fileName = file.getName();
-
-                BufferedReader reader = null;
-                try {
-                    reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-                    StringBuilder txtStringBuilder = new StringBuilder();
-                    String line = null;
-
-                    while ((line = reader.readLine()) != null)
-                        txtStringBuilder.append(line);
-
-                    reader.close();
-                    fileName = fileName.substring(0, fileName.indexOf("."));
-                    if (true) {
-                        mKey.setText(txtStringBuilder.toString());
-                    } else {
-                        mEditText.setText(txtStringBuilder.toString());
-                        mFileNameInput.setText(fileName);
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        try {
-            builder.build().show(getActivity().getSupportFragmentManager(), null);
-        } catch (ExternalStorageNotAvailableException e) {
-            e.printStackTrace();
-        }
-    }
 }
