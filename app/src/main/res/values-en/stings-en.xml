@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cryptography</string>
+    <string name="title_input">Enter the string to encrypt</string>
+    <string name="input_text">Your line</string>
+    <string name="title_key">Enter the key for decryption</string>
+    <string name="title_key_text">Enter the text for encryption</string>
+    <string name="title_key_pvch">Enter the HPLC key</string>
+    <string name="title_key_gamma">Enter the T-gamma period</string>
+    <string name="input_key">Your key</string>
+    <string name="input_key_text">Your text</string>
+    <string name="button_encrypt">Encrypt</string>
+    <string name="button_discrypt">Расшифровать</string>
+    <string name="button_write_to_file">Write to file</string>
+    <string name="button_read_from_file">Read from file</string>
+    <string name="button_read_text_from_file">Read text from file</string>
+
+    <string name="file_name_hint">Enter the file name</string>
+
+    <string name="choose_laba">Select an encryption method:</string>
+    <string name="choose_lab1">Encryption of Caesar</string>
+    <string name="choose_lab2">Encryption of Tritemius</string>
+    <string name="choose_lab3">Gamma Encryption</string>
+    <string name="choose_lab4">Text Encryption</string>
+    <string name="file_name">File name:</string>
+    <string name="text_view_file_data">File contents:</string>
+    <string name="key_value_encryption">Select the key encryption method:</string>
+    <string name="linear_equation">The linear equation</string>
+    <string name="not_linear_equation">The nonlinear equation</string>
+    <string name="phrase">Phrase</string>
+    <string name="choose_des_method">Select an encryption method:</string>
+    <string name="des_method">DES method</string>
+
+
+    <string name="Exit">Exit</string>
+    <string name="About">About us</string>
+    <string name="Details_msg_rus">This application was created by a student of the KPI as
+         Laboratory work. Author: Artem Guminsky</string>
+    <string name="OK_button">Close</string>
+    <string name="tv_input_file_name">Enter the file name</string>
+
+</resources>
